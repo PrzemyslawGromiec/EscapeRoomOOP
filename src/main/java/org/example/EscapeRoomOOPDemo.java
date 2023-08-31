@@ -7,6 +7,7 @@ import org.example.items.Window;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class EscapeRoomOOPDemo {
     public static void main(String[] args) {
@@ -19,5 +20,24 @@ public class EscapeRoomOOPDemo {
         for (Item userItem : userItems) {
             System.out.println(userItem.getName());
         }
+
+        Scanner scanner = new Scanner(System.in);
+        String choice = scanner.nextLine();
+
+        boolean isPresent = false;
+
+        for (Item userItem : userItems) {
+            if (userItem.getName().equals(choice)) {
+                System.out.println("Using:" + userItem.getName());
+                isPresent = true;
+                break;
+            }
+        }
+        System.out.println("Is item in your list? " + isPresent);
+
+
+
+
+
     }
 }
