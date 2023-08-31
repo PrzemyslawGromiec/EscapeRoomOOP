@@ -30,7 +30,7 @@ public class EscapeRoomOOPDemo {
             for (Item userItem : userItems) {
                 if (userItem.getName().equals(choice)) {
                     System.out.println("Using:" + userItem.getName());
-                    userItem.use();
+                    userItem.use(userItems);
                     isPresent = true;
                     break;
                 }
