@@ -1,5 +1,7 @@
 package org.example.items;
 
+import org.example.GameStatus;
+
 import java.util.List;
 
 public class Key extends Item{
@@ -8,7 +10,7 @@ public class Key extends Item{
     }
 
     @Override
-    public void use (List<Item> items) {
-        items.remove(this);
+    public void use (GameStatus gameStatus) {
+        gameStatus.getItems().remove(this);
     }
 }

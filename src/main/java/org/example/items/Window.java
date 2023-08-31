@@ -1,5 +1,6 @@
 package org.example.items;
 
+import org.example.GameStatus;
 import org.example.items.Item;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public class Window extends Item {
         isOpen = false;
     }
 
-    public void use(List<Item> items) {
+    public void use( GameStatus gameStatus) {
         isOpen = !isOpen;
         System.out.println(isOpen ? "Window open" : "Window closed");;
     }

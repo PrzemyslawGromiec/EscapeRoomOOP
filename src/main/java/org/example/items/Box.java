@@ -1,5 +1,7 @@
 package org.example.items;
 
+import org.example.GameStatus;
+
 import java.util.List;
 
 public class Box extends Item{
@@ -8,7 +10,7 @@ public class Box extends Item{
     }
 
     @Override
-    public void use(List<Item> items) {
+    public void use(GameStatus gameStatus) {
 
     }
 }

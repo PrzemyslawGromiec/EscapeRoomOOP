@@ -1,5 +1,7 @@
 package org.example.items;
 
+import org.example.GameStatus;
+
 import java.util.List;
 
 public abstract class Item {
@@ -9,7 +11,7 @@ public abstract class Item {
         this.name = name;
     }
 
-    public abstract void use(List<Item> items);
+    public abstract void use(GameStatus gameStatus);
     public String getName() {
         return name;
     }

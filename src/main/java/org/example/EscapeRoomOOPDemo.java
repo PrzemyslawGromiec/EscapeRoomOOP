@@ -12,11 +12,13 @@ import java.util.Scanner;
 public class EscapeRoomOOPDemo {
     public static void main(String[] args) {
         List<Item> userItems = new ArrayList<>();
-        userItems.add(new Door("door"));
-        userItems.add(new Key("key"));
+        GameStatus gameStatus = new GameStatus(userItems);
+        Key key = new Key("key");
+        userItems.add(new Door("door", key ));
+        userItems.add(key);
         userItems.add(new Window("window"));
 
-        while (true) {
+        while (gameStatus.isRunning()) {
             System.out.println("Available items:");
             for (Item userItem : userItems) {
                 System.out.println(userItem.getName());
@@ -30,7 +32,7 @@ public class EscapeRoomOOPDemo {
             for (Item userItem : userItems) {
                 if (userItem.getName().equals(choice)) {
                     System.out.println("Using:" + userItem.getName());
-                    userItem.use(userItems);
+                    userItem.use(gameStatus);
                     isPresent = true;
                     break;
                 }
