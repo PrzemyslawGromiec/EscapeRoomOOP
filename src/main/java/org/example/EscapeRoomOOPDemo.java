@@ -16,28 +16,27 @@ public class EscapeRoomOOPDemo {
         userItems.add(new Key("key"));
         userItems.add(new Window("window"));
 
-        System.out.println("Available items:");
-        for (Item userItem : userItems) {
-            System.out.println(userItem.getName());
-        }
-
-        Scanner scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();
-
-        boolean isPresent = false;
-
-        for (Item userItem : userItems) {
-            if (userItem.getName().equals(choice)) {
-                System.out.println("Using:" + userItem.getName());
-                isPresent = true;
-                break;
+        while (true) {
+            System.out.println("Available items:");
+            for (Item userItem : userItems) {
+                System.out.println(userItem.getName());
             }
+
+            Scanner scanner = new Scanner(System.in);
+            String choice = scanner.nextLine();
+
+            boolean isPresent = false;
+
+            for (Item userItem : userItems) {
+                if (userItem.getName().equals(choice)) {
+                    System.out.println("Using:" + userItem.getName());
+                    userItem.use();
+                    isPresent = true;
+                    break;
+                }
+            }
+            System.out.println("Is item in your list? " + isPresent);
+
         }
-        System.out.println("Is item in your list? " + isPresent);
-
-
-
-
-
     }
 }

@@ -8,4 +8,9 @@ public class Window extends Item {
         super(name);
         isOpen = false;
     }
+
+    public void use() {
+        isOpen = !isOpen;
+        System.out.println(isOpen ? "Window open" : "Window closed");;
+    }
 }

@@ -5,5 +5,10 @@ public class Door extends Item{
         super(name);
     }
 
+    @Override
+    public void use() {
+
+    }
+
 
 }
