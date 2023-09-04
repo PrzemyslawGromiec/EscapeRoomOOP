@@ -2,6 +2,7 @@ package org.example.items;
 
 import org.example.GameStatus;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Key extends Item{
@@ -10,7 +11,9 @@ public class Key extends Item{
     }
 
     @Override
-    public void use (GameStatus gameStatus) {
-        gameStatus.getItems().remove(this);
+    public void use (GameStatus gameStatus) throws FileNotFoundException {
+        gameStatus.getCurrentRoomItems().remove(this);
     }
+
+
 }

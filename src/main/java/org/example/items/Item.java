@@ -2,6 +2,7 @@ package org.example.items;
 
 import org.example.GameStatus;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public abstract class Item {
@@ -11,8 +12,10 @@ public abstract class Item {
         this.name = name;
     }
 
-    public abstract void use(GameStatus gameStatus);
+    public abstract void use(GameStatus gameStatus) throws FileNotFoundException;
     public String getName() {
         return name;
     }
+
+
 }

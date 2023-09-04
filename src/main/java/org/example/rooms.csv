@@ -1,0 +1,4 @@
+window;key;door;
+door;box;key;
+key;key;door;
+window1;window2;window3;hidden door;
