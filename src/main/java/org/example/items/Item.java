@@ -4,6 +4,7 @@ import org.example.GameStatus;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class Item {
     private String name;
@@ -16,6 +17,4 @@ public abstract class Item {
     public String getName() {
         return name;
     }
-
-
 }
